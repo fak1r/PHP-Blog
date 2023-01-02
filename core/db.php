@@ -28,3 +28,8 @@
 		}
 		return true;
 	}
+
+    function dblastID() : string{
+        $db = dbInstance();
+        return $db -> lastInsertId();
+    }

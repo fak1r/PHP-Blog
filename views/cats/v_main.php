@@ -25,7 +25,7 @@
                 <td><?= $article['title'];?></td>
                 <td><?= $article['content']?></td>
                 <td><?= $article['dt_add']?></td>
-                <td><a href="<?=BASE_URL?>cat/<?= $article['id_cat']?>"><?= $cat_title?></a></td>
+                <td><a href="<?=BASE_URL?>cat/<?= $article['id_cat']?>"><?= $cat_name?></a></td>
             </tr>
         </table>
         <br>

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title><?=$title?></title>
+    <link rel="canonical" href="<?=$canonical?>">
     <link rel="stylesheet" href="<?=BASE_URL?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=BASE_URL?>assets/css/main.css">
 </head>
@@ -14,8 +15,8 @@
     <header class="site-header">
         <div class="container">
             <div class="logo">
-                <div class="logo_title h3">My Site</div>
-                <div class="logo_subtitle h6">About some themes</div>
+                <div class="logo_title h3">Crypto Blog</div>
+                <div class="logo_subtitle h6">Краткие описания популярных монет</div>
             </div>
         </div>
     </header>
@@ -23,14 +24,31 @@
         <div class="container">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" href="<?=BASE_URL?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?c=add">Add</a>
+                    <a class="nav-link" href="<?=BASE_URL?>article/add">Add</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?c=contacts">Contact</a>
+                    <a class="nav-link" href="<?=BASE_URL?>contacts">Contact</a>
                 </li>
+                <?php if ($user === null){ ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?=BASE_URL?>auth/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?=BASE_URL?>auth/registration">Registration</a>
+                </li>
+                <?php } else { ?>
+                <li>
+                    <a class="nav-link" href="<?=BASE_URL?>auth/logout">Logout (<?=$user['name']?>)</a>
+                </li>
+                <?php }
+                if (($user != null) && ($user['id_user'] == 1)){?>
+                <li>
+                    <a class="nav-link" href="<?=BASE_URL?>logs">Logs (for admin only)</a>
+                </li>
+                <?php }?>
             </ul>
         </div>
     </nav>
@@ -40,7 +58,7 @@
         </div>
     <footer class="site-footer">
         <div class="container">
-            &copy;Site about all
+            &copy;PHP
         </div>
     </footer>
 </body>

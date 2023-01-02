@@ -1,0 +1,4 @@
+{"dt":"18:42:29","ip":"::1","uri":"\/hw\/","referer":""}
+{"dt":"18:47:05","ip":"::1","uri":"\/hw\/article.php?id=2","referer":"http:\/\/localhost\/hw\/"}
+{"dt":"20:49:21","ip":"::1","uri":"\/hw\/index.php","referer":"http:\/\/localhost\/hw\/article.php?id=2"}
+{"dt":"20:49:22","ip":"::1","uri":"\/hw\/article.php?id=5","referer":"http:\/\/localhost\/hw\/index.php"}

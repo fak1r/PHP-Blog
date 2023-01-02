@@ -1,13 +1,19 @@
 <?php
 
-const BASE_URL = '/hw6/';
+const HOST = 'http://localhost';
+const BASE_URL = '/PHP/blog/';
 const DB_HOST = 'localhost';
-const DB_NAME = 'hw_4';
+const DB_NAME = 'cryptoBlog';
 const DB_USER = 'root';
 const DB_PASS = '';
 
 include_once('core/arr.php');
 include_once('core/db.php');
 include_once('core/system.php');
+include_once('core/auth.php');
 
-include_once('model/dbarticles.php');
+include_once('model/articles.php');
+include_once('model/cats.php');
+include_once('model/users.php');
+include_once('model/sessions.php');
+include_once('model/visits.php');
