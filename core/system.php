@@ -52,8 +52,8 @@
         if (mb_strlen($fields['title'], 'UTF-8') <= 1){
             $errors[] = 'Имя не короче 1 символа';
         }
-        elseif ((mb_strlen($fields['title'], 'UTF-8') > 10)){
-            $errors[] = 'Имя не длиннее 10 символов';
+        elseif ((mb_strlen($fields['title'], 'UTF-8') > 30)){
+            $errors[] = 'Имя не длиннее 30 символов';
         }
         $fields['title'] = htmlspecialchars($fields['title']);
         return $errors;

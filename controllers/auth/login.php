@@ -20,6 +20,9 @@
                 header('Location:' . BASE_URL);
                 exit();
             }
+            else{
+                $user = null;
+            }
         }
     }
     else{

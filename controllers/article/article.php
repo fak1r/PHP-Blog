@@ -16,16 +16,20 @@ if ($normID != false){
             'cat_title' => $cat_title
         ]);
 
-        $left = template('articles/v_menu',[
-            'id_article' => $id_article,
-            'userid' => $user['id_user'] ?? 0,
-            'articleAuthor' => $article['id_user']
-        ]);
-        $pageContent = template('base/v_con2col', [
-            'title' => $pageTitle,
-            'content' => $content,
-            'left' => $left,
-        ]);
+        if (($user != 0) && ($article['id_user'] == $user['id_user'])) {
+            $left = template('articles/v_menu', [
+                'id_article' => $id_article,
+                'userid' => $user['id_user'] ?? 0,
+                'articleAuthor' => $article['id_user']
+            ]);
+            $pageContent = template('base/v_con2col', [
+                'title' => $pageTitle,
+                'content' => $content,
+                'left' => $left,
+            ]);
+        } else {
+            $pageContent = $content;
+        }
     }
     else {
         header('HTTP/1.1 404 Not Found');

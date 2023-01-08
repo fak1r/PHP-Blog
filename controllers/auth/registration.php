@@ -1,6 +1,7 @@
 <?php
 
 $err = '';
+$addUser = false;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $fields = extractFields($_POST, ['login', 'password', 'email', 'name']);

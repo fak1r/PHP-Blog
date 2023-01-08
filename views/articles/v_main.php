@@ -1,6 +1,6 @@
 <div class="row">
 
-    <main class="col col-12 col-md-9">
+    <main class="col col-12">
     <h5>Статья №<?= $article['id_article'];?></h5>
     <div>
         <style>
