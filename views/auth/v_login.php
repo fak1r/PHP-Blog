@@ -1,11 +1,11 @@
-<form method="post">
+<form class="form" method="post">
     <div class="form-group">
         <label for="auth-login">Login</label>
-        <input type="text" class="form-control" id="auth-login" name="login">
+        <input type="text" class="form-control check" id="auth-login" name="login">
     </div>
     <div class="form-group">
         <label for="auth-password">Password</label>
-        <input type="password" class="form-control" id="auth-password" name="password">
+        <input type="password" class="form-control check" id="auth-password" name="password">
     </div>
     <div class="form-check">
         <input type="checkbox" class="form-check-input" id="login-remember" name="remember">
@@ -20,3 +20,4 @@
         </div>
     <?php endif; ?>
 </form>
+<script src="../assets/js/form_validate.js"></script>

@@ -29,3 +29,7 @@ body {
 .site-content{
 	padding: 10px 0;
 }
+
+.err{
+	outline: 1px solid red;
+}

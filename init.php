@@ -1,7 +1,7 @@
 <?php
 
 const HOST = 'http://localhost';
-const BASE_URL = '/PHP/blog/';
+const BASE_URL = '/PHP/PHP-Blog/';
 const DB_HOST = 'localhost';
 const DB_NAME = 'cryptoBlog';
 const DB_USER = 'root';

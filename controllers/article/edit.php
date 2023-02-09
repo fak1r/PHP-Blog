@@ -27,7 +27,6 @@ if (($fields != false) && (($fields['id_user'] == $user['id_user']) || ($user['i
         $validateErrors = [];
     }
     $cats = getCats();
-
     $pageTitle = 'Edit Article';
     $pageContent = template('articles/v_add', [
         'fields' => $fields,

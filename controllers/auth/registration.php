@@ -26,5 +26,5 @@ $pageContent = template('auth/v_registration', [
 
 if ($addUser == true){
     $pageTitle = 'Успешно!';
-    $pageContent = "<h1>Регистрация успешно завершена! <br>Добро пожаловать!</h1>";
+    $pageContent = "<h1>Регистрация успешно завершена! <br>Авторизуйтесь по указанным данным!</h1>";
 }
